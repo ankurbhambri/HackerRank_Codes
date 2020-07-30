@@ -7,25 +7,29 @@ def print_matrix(mat):
 
 # Function to transpose the matrix
 def transpose_matrix(mat):
-    for i in range(len(mat)):
-        for j in range(i,len(mat)):
-            mat[i][j], mat[j][i] = mat[j][i],mat[i][j]
+    for i in range(len(mat)): 
+        for j in range(i, len(mat)):
+            mat[i][j], mat[j][i] = mat[j][i], mat[i][j]
 
-# Function to rotate the matrix anti clock wise
-def reverse_columns(mat):
-    for i in range (len(mat)):
+# Function to rotate the matrix clock wise
+def clock_wise_rotate(mat):
+    for i in range(len(mat)):
         k = len(mat) - 1
-        for j in range(k-1):
-            mat[j][i], mat[k][i] = mat[k][i], mat[j][i]
-            k = k - 1
- 
+        aa = 1
+        for j in range(k):
+            if k >= 1:
+                mat[i][j], mat[i][k] = mat[i][k], mat[i][j]
+                k = k - aa
+                aa += 1
+
+
 # Main Function
 mat = [[1,2,3],[4,5,6],[7,8,9]]
 print("The array before rotation is ")
 print_matrix(mat)
 
 transpose_matrix(mat)
-reverse_columns(mat)
+clock_wise_rotate(mat)
 
 print("\nThe array after rotation is ")
 print_matrix(mat)
@@ -36,7 +40,7 @@ print("The array before rotation is ")
 print_matrix(mat2)
 
 transpose_matrix(mat2)
-reverse_columns(mat2)
+clock_wise_rotate(mat2)
 
 print("\nThe array after rotation is ")
 print_matrix(mat2)
