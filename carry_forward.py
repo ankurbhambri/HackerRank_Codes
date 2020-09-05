@@ -20,6 +20,5 @@ ll = int(input())
 val = [int(input()) for k in range(ll)]
 print('Your array', val)
 
-val = given_array(val, ll)
-
-print(val)
+# Output
+print(given_array(val, ll))

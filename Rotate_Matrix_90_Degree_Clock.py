@@ -22,7 +22,6 @@ def clock_wise_rotate(mat):
                 k = k - aa
                 aa += 1
 
-
 # Main Function
 mat = [[1,2,3],[4,5,6],[7,8,9]]
 print("The array before rotation is ")
