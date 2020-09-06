@@ -1,5 +1,5 @@
-from functools import cmp_to_key
-from collections import defaultdict
+# from functools import cmp_to_key
+# from collections import defaultdict
 
 ################################################
 # Another code
@@ -193,7 +193,7 @@ from collections import defaultdict
 #             'http://airline_5/json/', request_date).json()
 #         all_responses.append(response_airline5)
 
-#         # here i am gussing every api give an response 
+#         # here i am gussing every api give an response
 #         # iam assuming keys in all api responses are price, date_time and seat_avaliablity
 #         context = {}
 #         flight_responses = []
@@ -222,7 +222,7 @@ from collections import defaultdict
 
 # There are two reasons you might want to customize a Manager, to add extra Manager methods, or to modify the initial queryset for the Manager returns.
 
-# example: - 
+# example: -
 # class Employee(models.Model):
 #       name = models.CharField(max_length=200)
 #       active = models.BooleanField(default=True)
@@ -245,7 +245,7 @@ from collections import defaultdict
 #################################################
 
 # def given_array(given_list, n):
-#     carry = 1 
+#     carry = 1
 #     for i in reversed(range(n)):
 #         import ipdb; ipdb.set_trace()
 #         print(i, given_list[i])
@@ -294,38 +294,137 @@ from collections import defaultdict
 # pyramid(5)
 
 # def pattern(n):
+
 #     k = 2 * n - 2
+#     vow = ['a', 'b', 'c', 'd', 'e']
 #     for i in range(0, n):
 #         for j in range(0 , k):
 #             print(end=" ")
 #         k = k - 1
 #         for j in range(0 , i + 1 ):
-#             print("* ", end="")
+#             # import ipdb; ipdb.set_trace()
+#             # print(j)
+#             if i==j:
+#                 print(vow[-1], end="")
+#             # else:
+#             #     print(vow[-1][:i-j], end="")
+
 #         print("\r")
-#     k = n - 2
-#     for i in range(n , -1, -1):
-#         for j in range(k , 0 , -1): 
-#             print(end=" ")
-#         k = k + 1
-#         for j in range(0 , i + 1):
-#             print("* ", end="")
-#         print("\r")
- 
+
+# k = n - 2
+# for i in range(n , -1, -1):
+#     for j in range(k , 0 , -1):
+#         print(end=" ")
+#     k = k + 1
+#     for j in range(0 , i + 1):
+#         print("* ", end="")
+#     print("\r")
+
 # pattern(5)
+# def occurrence(arr, int):
+#     dd = {}
+#     for i in arr: # calculating repentance of element in array
+#         if i in dd.keys():
+#             dd[i] += 1
+#         else:
+#             dd[i] = 1
 
-def occurrence(arr, int):
-    dd = {}
-    for i in arr: # calculating repentance of element in array 
-        if i in dd.keys():
-            dd[i] += 1
-        else:
-            dd[i] = 1
+#     if dd[int]: # matching int as key in dictionary
+#         print(dd[int])
+#     else:
+#         print("Integer not present in array")
 
-    if dd[int]: # matching int as key in dictionary
-        print(dd[int])
-    else:
-        print("Integer not present in array")
+# occurrence([2,3,4,3,2,1], 3)
 
-occurrence([2,3,4,3,2,1], 3)
+# for row in range(1, 6):
+
+#     for column in range(0, row+1):
+
+#         print(" ", end="")
+
+#     for column2 in range(row, 5):
+
+#         print(chr(column2+64), end="")
+
+#     for column3 in range(5, row-1, -1):
+
+#         print(chr(column3+64), end="")
+
+#     print()
+
+#################################################
+# Another Code
+
+# ---------e---------
+# -------d-e-d-------
+# -----c-d-e-d-c-----
+# ---b-c-d-e-d-c-b---
+# -a-b-c-d-e-d-c-b-a-
+# ---b-c-d-e-d-c-b---
+# -----c-d-e-d-c-----
+# -------d-e-d-------
+# ---------e---------
+
+
+def pyramid(n):
+
+    for row in range(1, n+1):
+
+        for column in range(0, row+1):
+
+            print(" ", end="")
+
+        for column2 in range(row, n):
+
+            print(chr(column2+64), end="")
+
+        for column3 in range(n, row-1, -1):
+
+            print(chr(column3+64), end="")
+
+        print()
+
+pyramid(5)
+
+
+
+# def test(n):
+#     count = 1
+#     nos_space = 1
+#     start = 0
+
+#     for i in range(1, n*2):
+#         spc = n - nos_space
+
+#         for _ in range(spc, 1, -1):
+#             print('', end='')
+
+#         if i < n:
+#             start = i
+#             nos_space -=1
+
+#         else:
+#             start = n*2-i
+#             nos_space -=1
+
+#         for j in range(0, count):
+#             print(start, end='')
+
+#             if j < count//2:
+#                 start -=1
+#             else:
+#                 start +=1
+#         if i<n:
+#             count = count + 2
+#         else:
+#             count = count - 2
+
+#         print()
+
+# test(5)
+        
+
+
+
 
 #################################################
