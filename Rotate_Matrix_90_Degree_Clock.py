@@ -13,6 +13,7 @@ def transpose_matrix(mat):
 
 # Function to rotate the matrix clock wise
 def clock_wise_rotate(mat):
+    import ipdb; ipdb.set_trace()
     for i in range(len(mat)):
         k = len(mat) - 1
         aa = 1

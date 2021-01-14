@@ -9,7 +9,6 @@
 #         self.score = score
 
 # def comparator(one, two):
-#     import ipdb; ipdb.set_trace()
 #     if one[-1] == two[-1]:
 #         if one[0] > two[0]:
 #             return 1
@@ -366,25 +365,25 @@
 # ---------e---------
 
 
-def pyramid(n):
+# def pyramid(n):
 
-    for row in range(1, n+1):
+#     for row in range(1, n+1):
 
-        for column in range(0, row+1):
+#         for column in range(0, row+1):
 
-            print(" ", end="")
+#             print(" ", end="")
 
-        for column2 in range(row, n):
+#         for column2 in range(row, n):
 
-            print(chr(column2+64), end="")
+#             print(chr(column2+64), end="")
 
-        for column3 in range(n, row-1, -1):
+#         for column3 in range(n, row-1, -1):
 
-            print(chr(column3+64), end="")
+#             print(chr(column3+64), end="")
 
-        print()
+#         print()
 
-pyramid(5)
+# pyramid(5)
 
 
 
@@ -422,9 +421,19 @@ pyramid(5)
 #         print()
 
 # test(5)
-        
+#################################################        
+#################################################
+# Factorial
 
+def recur_factorial(nos):
+   if nos == 1:
+       return nos
+   else: 
+       return nos*recur_factorial(nos-1)  
 
+print(recur_factorial(5))
 
+#################################################
+#################################################
 
 #################################################
