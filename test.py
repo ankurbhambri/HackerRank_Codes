@@ -386,7 +386,6 @@
 # pyramid(5)
 
 
-
 # def test(n):
 #     count = 1
 #     nos_space = 1
@@ -421,19 +420,37 @@
 #         print()
 
 # test(5)
-#################################################        
+#################################################
 #################################################
 # Factorial
 
-def recur_factorial(nos):
-   if nos == 1:
-       return nos
-   else: 
-       return nos*recur_factorial(nos-1)  
+# def recur_factorial(nos):
+#    if nos == 1:
+#        return nos
+#    else:
+#        return nos*recur_factorial(nos-1)
 
-print(recur_factorial(5))
+# print(recur_factorial(5))
 
 #################################################
 #################################################
+
+
+# def mydeco(func):
+#     def inner(x,y):
+#         if x < y:
+#             x,y = y,x
+#             func(x,y)
+#     return inner
+
+# @mydeco
+# def divi(a,b):
+#     print(a/b)
+
+# obj = mydeco(divi)
+
+# obj(5,10)
+
+# divi(2,4)
 
 #################################################
