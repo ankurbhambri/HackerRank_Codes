@@ -3,6 +3,7 @@ class MHA():
     def __init__(self, arr):
         self.arr = arr
 
+    # Nearest Smallest Elemet at Right
     def nsr(self):
         nsr = []
         for i in range(len(arr)):
@@ -17,12 +18,12 @@ class MHA():
                 nsr.append(arr.index(next))
         return nsr
 
+    # Nearest Smallest Elemet at Left
     def nsl(self):
-
         nsl = []
         for i in range(len(arr)):
-            prev = -1       
-                        #(Start, Stop, Step) 
+            prev = -1
+                         #(Start, Stop, Step)
             for k in range(i-1, -2, -1):
                 if arr[i] > arr[k]:
                     prev = arr[k]
@@ -38,9 +39,10 @@ class MHA():
         nsr = self.nsr()
         nsl = self.nsl()
         for i in range(len(arr)):
-            mha.append(arr[i]*(nsr[i] - nsl[i] -1))
+            mha.append(arr[i]*(nsr[i] - nsl[i] - 1))
         return mha
 
-arr = [6,2,5,4,5,1,6]
+
+arr = [6, 2, 5, 4, 5, 1, 6]
 obj = MHA(arr)
 print(obj.final_compute())
