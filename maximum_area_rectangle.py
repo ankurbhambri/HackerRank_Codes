@@ -52,6 +52,8 @@ if __name__ == "__main__":
         if i == 0:
             new_arrs.append(arrs[i])
         else:
+            # removing 0 base values from array
+            arrs[i] = [x for x in arrs[i] if x!=0]
             new_arrs.append(list(map(add, new_arrs[i-1], arrs[i])))
 
     max_sub = []
@@ -61,3 +63,4 @@ if __name__ == "__main__":
         max_sub.append(max(obj.final_compute()))
 
     print(max_sub)
+    print(max(max_sub))
