@@ -452,5 +452,28 @@
 # obj(5,10)
 
 # divi(2,4)
+#################################################
+
+#################################################
+
+# from django.db.models import Count, F
+
+
+# class Customer(models.Model):
+#     name = models.CharField(max_length=50)
+
+# class Shipment(models.Model):
+#     customer = models.ForeignKey(Customer, null=False, on_delete=models.CASCADE)
+
+# class Order(models.Model)
+#     customer = models.ForeignKey(Customer, null=False, on_delete=models.CASCADE)
+
+
+# Both service shipment and order services
+
+# No issue will occur while fetching customer details in both services if they use
+# this kind of architecture.
+
+#################################################
 
 #################################################
