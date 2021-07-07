@@ -1,6 +1,6 @@
 '''
 step 1 Sorting the nodes
-step 2 
+step 2
     a pick the smallest edge
     b check if added edge forms cycle
     c if cycle not found then include the edge
@@ -17,7 +17,7 @@ def find_parent_arr(prnt, part_arr=[]):
 def kruskal(srt_arr, v, e):
 
     ip_arr = sorted(srt_arr, key=lambda i: i['wt'])
-    op_arr = [range(v - 1)]
+    op_arr = []
     part_arr = []
 
     # parent array
@@ -37,6 +37,7 @@ def kruskal(srt_arr, v, e):
             count += 1
         i += 1
 
+    # Print array
     for i in range(v - 1):
 
         print(op_arr[i]['src'], op_arr[i]['des'], op_arr[i]['wt'])
@@ -72,6 +73,6 @@ dd1 = [
 ]
 # vertices = 6
 # edges = 11
-print(kruskal(dd, 6, 11))
+kruskal(dd, 6, 11)
 
-print(kruskal(dd1, 7, 12))
+kruskal(dd1, 7, 12)

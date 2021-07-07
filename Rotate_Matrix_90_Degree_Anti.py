@@ -6,16 +6,20 @@ def print_matrix(mat):
         print()
 
 # Function to transpose the matrix
+
+
 def transpose_matrix(mat):
     for i in range(len(mat)):
         for j in range(i, len(mat)):
             mat[i][j], mat[j][i] = mat[j][i], mat[i][j]
 
 # Function to rotate the matrix anti clock wise
+
+
 def reverse_columns(mat):
     for i in range(len(mat)):
         k = len(mat) - 1
-        for j in range(k-1):
+        for j in range(k - 1):
             mat[j][i], mat[k][i] = mat[k][i], mat[j][i]
             k = k - 1
 
