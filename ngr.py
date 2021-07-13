@@ -3,7 +3,6 @@ ngr = []
 for i in range(len(arr)):
     for j in range(i, len(arr)):
         if arr[i] < arr[j]:
-            if arr[i] == 1:
             next = arr[j]
             break
         else:

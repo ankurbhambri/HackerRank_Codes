@@ -1,7 +1,7 @@
 from itertools import combinations
 
+
 def pairs(k, arr):
-    import ipdb; ipdb.set_trace()
     comb = list(combinations(arr, 2))
     pairs = list(filter(lambda x: abs(x[1] - x[0]) == k, comb))
     return len(pairs)
