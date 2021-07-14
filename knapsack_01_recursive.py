@@ -1,11 +1,18 @@
-def knapsack(arr, W):
-    n = len(arr)
+def knapSack(W, wt, val, n):
+    # Base cndt
     if n == 0 or W==0:
         return 0
+    if wt[n-1] > W:
+        knapSack(W, wt, val, n-1)
     else:
-        knapsack(arr, W)
+        return max(
+            wt[n-1] + knapSack(W-wt[n-1], wt, val, n-1),
+            knapSack(W, wt, val, n-1)
+        )
 
 if __name__ == "__main__":
-    arr = {1:1, 3: 4, 4: 5, 5:7}
-    W = 7
-    print(knapsack(arr, W))
+    wt = [10, 20, 30]
+    val = [60, 100, 120]
+    W = 50
+    n = len(val)
+    print (knapSack(W, wt, val, n))
